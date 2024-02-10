@@ -36,7 +36,7 @@ class App(customtkinter.CTk):
     def __init__(self):
         super().__init__()
         # configure window
-        self.title("Controller")
+        self.title("ROS Robot Control")
         self.geometry(f"{2560}x{1600}")
         self.minsize(1200,700)
         self.maxsize(2560,1600)
@@ -258,7 +258,7 @@ class App(customtkinter.CTk):
         # self.logo_image = customtkinter.CTkImage(PIL.Image.open(os.path.join(self.image_path, "robot.png")), size=(150, 150))
         # self.logo_label = customtkinter.CTkLabel(self.sidebar_frame,text = "",image=self.logo_image, compound="left", font=customtkinter.CTkFont(size=25, weight="bold"))
         # self.logo_label.grid(row=0, column=3, padx=20, pady=(20, 10))
-        self.logo_label1 = customtkinter.CTkLabel(self.sidebar_frame, text="PULSANZER",text_color= "Orange", font=customtkinter.CTkFont(size=25, weight="bold"))
+        self.logo_label1 = customtkinter.CTkLabel(self.sidebar_frame, text="ROS2",text_color= "Orange", font=customtkinter.CTkFont(size=25, weight="bold"))
         self.logo_label1.grid(row=1, column=3, padx=20, pady=(20, 10))
         self.sidebar_button_1 = customtkinter.CTkButton(self.sidebar_frame,text = "START", fg_color= "Green", hover_color="#4fc22b", command=self.start_button_event)
         self.sidebar_button_1.grid(row=2, column=3, padx=20, pady=10)
@@ -301,13 +301,13 @@ class App(customtkinter.CTk):
         # Robot List
         self.tabview = customtkinter.CTkTabview(self, width=100)
         self.tabview.grid(row=0, column=0, padx=(20, 0), pady=(20, 0), sticky="nsew")
-        self.tabview.add("Pulsanzer Details")
+        self.tabview.add("Robot 1")
         self.tabview.add("Robot 2")
-        self.tabview.tab("Pulsanzer Details").grid_columnconfigure(0, weight=1)
+        self.tabview.tab("Robot 1").grid_columnconfigure(0, weight=1)
         self.tabview.tab("Robot 2").grid_columnconfigure(0, weight=1)
-        self.optionmenu_1 = customtkinter.CTkOptionMenu(self.tabview.tab("Pulsanzer Details"), dynamic_resizing=False, values=["Manual", "Automatic"],command=self.Robot_Details)
+        self.optionmenu_1 = customtkinter.CTkOptionMenu(self.tabview.tab("Robot 1"), dynamic_resizing=False, values=["Manual", "Automatic"],command=self.Robot_Details)
         self.optionmenu_1.grid(row=0, column=0, padx=20, pady=(20, 10))
-        self.combobox_1 = customtkinter.CTkOptionMenu(self.tabview.tab("Pulsanzer Details"), values=["Modules","Camera", "Lidar", "Temerature", "AI ChatBot"],command=self.Robot_Module)
+        self.combobox_1 = customtkinter.CTkOptionMenu(self.tabview.tab("Robot 1"), values=["Modules","Camera", "Lidar", "Temerature", "AI ChatBot"],command=self.Robot_Module)
         self.combobox_1.grid(row=1, column=0, padx=20, pady=(20, 10))
         self.optionmenu_1 = customtkinter.CTkOptionMenu(self.tabview.tab("Robot 2"), values=["No  Mode  Detected!!"])
         self.optionmenu_1.grid(row=0, column=0, padx=20, pady=(30, 10))
@@ -326,13 +326,13 @@ class App(customtkinter.CTk):
         self.radio_var3 = customtkinter.IntVar()
         self.label_radio_group = customtkinter.CTkLabel(master=self.radiobutton_frame, text="Robot Operation",text_color= "Yellow", font=customtkinter.CTkFont(size=20, weight="bold"))
         self.label_radio_group.grid(row=0, column=2, columnspan=1, padx=10, pady=10, sticky="")
-        self.radio_button_1 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var,text=  "Deliver Medicines", value=1)
+        self.radio_button_1 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var,text=  "Operation 1", value=1)
         self.radio_button_1.grid(row=1, column=2, pady=10, padx=20, sticky="W")
-        self.radio_button_2 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, text= "Sanitize Hospital",value=2)
+        self.radio_button_2 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, text= "Operation 2",value=2)
         self.radio_button_2.grid(row=2, column=2, pady=10, padx=20, sticky="W")
-        self.radio_button_3 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, text= "Emergency Bot    ",value=3)
+        self.radio_button_3 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, text= "Operation 3", value=3)
         self.radio_button_3.grid(row=3, column=2, pady=10, padx=20, sticky="W")
-        self.radio_button_4 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, text= "Object Detection ",value=4)
+        self.radio_button_4 = customtkinter.CTkRadioButton(master=self.radiobutton_frame, variable=self.radio_var, text= "Operation 4",value=4)
         self.radio_button_4.grid(row=4, column=2, pady=10, padx=20, sticky="W")
 
 
@@ -405,7 +405,7 @@ class App(customtkinter.CTk):
         self.switch4 = customtkinter.CTkSwitch(master=self.scrollable_frame, text="AI ChatBot     ",command=Check_ChatBot_Dimensions)
         self.switch4.grid(row=4, column=0, padx=10, pady=(0, 20), sticky="W")
         self.scrollable_frame_switches.append(self.switch4)
-        switch5 = customtkinter.CTkSwitch(master=self.scrollable_frame, text="Sanitization Module", command=Sanitization_Module)
+        switch5 = customtkinter.CTkSwitch(master=self.scrollable_frame, text="RGB Module", command=Sanitization_Module)
         switch5.grid(row=5, column=0, padx=10, pady=(0, 20), sticky="W")
         self.scrollable_frame_switches.append(switch5)
         switch6 = customtkinter.CTkSwitch(master=self.scrollable_frame, text="Temperature Module",command=Check_Temerature)
@@ -558,10 +558,10 @@ customtkinter.set_default_color_theme("green")
 
 # Our app frame
 LOGIN = customtkinter.CTk()
-LOGIN.geometry("400x300")
-LOGIN.minsize(400,300)
-LOGIN.maxsize(500,400)
-LOGIN.title("Controller")
+LOGIN.geometry("450x350")
+LOGIN.minsize(450,350)
+LOGIN.maxsize(450,350)
+LOGIN.title("Ros Robot")
 
 # p1 = PhotoImage(file = 'icon.png')
   
@@ -577,7 +577,7 @@ def login():
     if user_entry.get() == UserName and user_pass.get() == Password:
         LOGIN.withdraw()
         RUN_ROBOT()
-    elif user_entry.get() != UserName or user_pass.get() != Password:
+    elif user_entry.get() != UserName or user_pass.get() != UserName & Password:
         Result = "Check your Username and Password"
     Lable12 = customtkinter.CTkLabel(LOGIN, text=Result)
     Lable12.pack(pady=20)
@@ -610,7 +610,7 @@ user_pass.pack(pady=12,padx=10)
 
 button = customtkinter.CTkButton(master=frame,text='Login',command=login,height= 30,width=150)
 button.pack(pady=20,padx=10)
-
+label = customtkinter.CTkLabel(LOGIN,text="Robot Login",font=my_font,text_color="orange")
 LOGIN.bind('<Return>',Login)
 
 LOGIN.mainloop()
