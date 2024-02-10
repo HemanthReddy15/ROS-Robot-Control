@@ -36,10 +36,10 @@ To access the application, use the following login credentials:
 
 **Username:** 
 ```bash 
-admin 
+admin
 ```
 **Password:** 
-```bash 
+```bash
 password
 ```
 
