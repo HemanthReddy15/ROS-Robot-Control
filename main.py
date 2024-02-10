@@ -11,6 +11,7 @@ import subprocess
 
 # openai.api_key = "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"
 
+
 global Servo
 global Servo_pin
 Servo_pin = 12
