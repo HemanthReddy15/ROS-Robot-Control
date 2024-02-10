@@ -17,19 +17,16 @@ git clone https://github.com/HemanthReddy15/ROS-Robot-Control.git
 ```
 2. Change the project directory
 ```bash
-  cd ROS-Robot-Control
-
+cd ROS-Robot-Control
 ```
 3. Install the dependencies 
 ```bash
-  pip install Pillow customtkinter==5.2.0 opencv-python pyfirmata2
-
+pip install Pillow customtkinter==5.2.0 opencv-python pyfirmata2
 ```
 ## 🤖 Running
 Use the following command to Run
 ```bash
-  python3 main.py
-
+python3 main.py
 ```
 ## 🔑 Login Credentials
 To access the application, use the following login credentials:
