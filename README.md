@@ -81,4 +81,4 @@ password
 
 ![Image 1](images/login.png)
 ![Image 2](images/control1.png)
-![Image 2](images/ServoControl.png)
+![Image 2](images/ServoControl1.png)
