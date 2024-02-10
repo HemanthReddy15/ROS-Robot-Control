@@ -39,6 +39,7 @@ admin
 ```bash
 password
 ```
+*Note: It is recommended to change the password after initial login.*
 
 ## 🕹️ Usage 
 1. **Starting the Application**: Execute the script to start the Pulsanzer controller.
@@ -49,7 +50,7 @@ password
 ## ⚡️ Features:
 - **Graphical User Interface (GUI):** The GUI provides intuitive controls for interacting with the robot system.
 - **Motor Control:** Enables control over the robot's movements using arrow keys.
-- **Servo Control:** Facilitates opening and closing of a box using a servo motor.
+- **Servo Control:** Control a robotic manipulator using a servo motor
 - **Camera Monitoring:** Allows live monitoring of the camera feed if the camera module is enabled.
 - **Temperature Sensing:** Monitors temperature if the temperature module is enabled.
 - **Command Line Interface (CLI):** Provides a command-line interface for executing commands and interacting with the system.
