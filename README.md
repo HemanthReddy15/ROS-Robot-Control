@@ -22,7 +22,7 @@ git clone https://github.com/HemanthReddy15/ROS-Robot-Control.git
 ```
 3. Install the dependencies 
 ```bash
-  pip install Pillow customtkinter==0.3 opencv-python pyfirmata2
+  pip install Pillow customtkinter==5.2.0 opencv-python pyfirmata2
 
 ```
 ## 🤖 Running
