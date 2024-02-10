@@ -180,11 +180,11 @@ class App(customtkinter.CTk):
         # create Screen
         def Check_camera():
             if switch1.get() == 1:
-                self.vs = cv2.VideoCapture(0) # capture video frames from 0 
+                self.vs = cv2.VideoCapture(0)
                 self.vs.set(cv2.CAP_PROP_FRAME_WIDTH, 400)
                 self.vs.set(cv2.CAP_PROP_FRAME_HEIGHT, 300)
-                self.current_image = None  # current image from the camera
-                self.panel = customtkinter.CTkLabel(self, width=250,text="")  # initialize image panel
+                self.current_image = None  
+                self.panel = customtkinter.CTkLabel(self, width=250,text="") 
                 self.panel.grid(row=0, column=1, padx=(20, 0), pady=(20, 0), sticky="nsew")
                 self.video_loop()
             else:
@@ -255,7 +255,7 @@ class App(customtkinter.CTk):
         self.sidebar_frame.grid(row=0, column=3, rowspan=5, sticky="nsew")
         # self.sidebar_frame.grid_rowconfigure(3, weight=1) 
         # self.image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), "images")
-        # self.logo_image = customtkinter.CTkImage(PIL.Image.open(os.path.join(self.image_path, "robot1.png")), size=(150, 150))
+        # self.logo_image = customtkinter.CTkImage(PIL.Image.open(os.path.join(self.image_path, "robot.png")), size=(150, 150))
         # self.logo_label = customtkinter.CTkLabel(self.sidebar_frame,text = "",image=self.logo_image, compound="left", font=customtkinter.CTkFont(size=25, weight="bold"))
         # self.logo_label.grid(row=0, column=3, padx=20, pady=(20, 10))
         self.logo_label1 = customtkinter.CTkLabel(self.sidebar_frame, text="PULSANZER",text_color= "Orange", font=customtkinter.CTkFont(size=25, weight="bold"))
@@ -542,10 +542,7 @@ class App(customtkinter.CTk):
         print(self.Robot_Module_Var)
                 
         
-############################################################################################################################################################
-############################################################################################################################################################
-############################################################################################################################################################
-############################################################################################################################################################ 
+
 # if __name__ == "__main__":
 #     app = App()
 #     app.mainloop()
@@ -565,14 +562,15 @@ LOGIN.geometry("400x300")
 LOGIN.minsize(400,300)
 LOGIN.maxsize(500,400)
 LOGIN.title("Controller")
-# p1 = PhotoImage(file = 'tree.png')
+
+# p1 = PhotoImage(file = 'icon.png')
   
 # # Setting icon of master window
 # LOGIN.iconphoto(False, p1)
 global UserName
 global Password
-UserName = ""
-Password = ""
+UserName = "admin"
+Password = "password"
 def login():
     global Result
     print("hi")
