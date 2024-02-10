@@ -3,10 +3,6 @@
 
 This Python script represents a comprehensive robot control system featuring a graphical user interface (GUI) developed with custom Tkinter. The system seamlessly incorporates a range of functionalities for precise robot control, encompassing motor movements, servo manipulation, camera surveillance, temperature sensing, and additional capabilities.
 
-
-
-
-
 ## 🛠️ Requirements
 
 - Python 3.12.X
@@ -35,7 +31,7 @@ Use the following command to Run
   python3 main.py
 
 ```
-## Login Credentials
+## 🔑 Login Credentials
 To access the application, use the following login credentials:
 
 **Username:** 
@@ -76,7 +72,7 @@ password
 - Refer to the code comments for additional details on each function and module.
 
 
-## Project Images
+## 🌄 Project Images
 **Here are some images related to the project:**
 
 ![Image 1](images/login.png)
